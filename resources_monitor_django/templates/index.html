@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <title>Resources usage</title>
+</head>
+<body>
+    <h1>Current resources usage</h1>
+    <hr>
+    <div class="container">
+        <div class="graph-container">
+            <canvas id="cpuUsageChart" width="500" height="400"></canvas>
+        </div>
+        <div class="graph-container">
+            <canvas id="ramUsageChart" width="500" height="400"></canvas>
+        </div>
+        <div class="graph-container">
+            <canvas id="networkUsageChart" width="500" height="400"></canvas>
+        </div>
+    </div>
+        <div class="container">
+            <div class="other-statuses"><h5>Uptime</h5><div id="uptime">n/a</div></div>
+            <div class="other-statuses"><h5>Disk usage</h5><div id="diskUsage">n/a</div></div>
+        </div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
